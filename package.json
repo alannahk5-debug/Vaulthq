@@ -1,0 +1,13 @@
+{
+  "name": "vaulthq-analytics",
+  "version": "1.0.0",
+  "description": "VaultHQ AI with Vercel Web Analytics",
+  "private": true,
+  "scripts": {
+    "validate": "echo 'HTML validation - no build required for static site'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  },
+  "devDependencies": {}
+}
