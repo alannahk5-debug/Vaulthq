@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1020">
+<title>VaultHQ AI — Job Application Workspace</title>
+<meta name="description" content="VaultHQ AI: a private, local-first workspace to compare your CV with a job posting and organize your application.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%23e7bc65%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-size=%2740%27 font-family=%27Arial%27 font-weight=%27700%27 text-anchor=%27middle%27 fill=%27%2317130a%27%3EV%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:dark;--bg:#090e1a;--panel:#111a2b;--panel2:#151f33;--line:#26344b;--text:#f4f6fb;--muted:#a4b0c4;--gold:#e7bc65;--gold2:#f7d993;--green:#7ed6ac;--red:#ff9c9c;--blue:#9fc3ff;--radius:18px}
+[data-theme="light"]{color-scheme:light;--bg:#f3f5f9;--panel:#fff;--panel2:#f7f8fc;--line:#dce2ec;--text:#172033;--muted:#5e6b80;--gold:#9b6a12;--gold2:#79500a;--green:#14784e;--red:#b22e37;--blue:#285fae}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#182440 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{max-width:1240px;margin:auto;padding:20px 18px 90px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0 24px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.03em;font-size:20px}.logo{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,var(--gold2),var(--gold));color:#111827;font-weight:950}.brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}.top-actions{display:flex;gap:8px;align-items:center}.btn{border:1px solid var(--line);border-radius:11px;padding:10px 14px;color:var(--text);background:var(--panel2);font-weight:700;transition:.2s}.btn:hover{transform:translateY(-1px);border-color:var(--gold)}.btn.primary{background:var(--gold);color:#101522;border-color:var(--gold)}.btn.ghost{background:transparent}.btn.small{padding:7px 10px;font-size:12px}.hero{padding:32px 0 22px;display:flex;justify-content:space-between;gap:20px;align-items:flex-end}.eyebrow{color:var(--gold);font-size:11px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.08;letter-spacing:-.055em;margin:9px 0 12px;max-width:760px}.hero p{max-width:650px;color:var(--muted);margin:0}.privacy{font-size:12px;color:var(--green);display:flex;align-items:center;gap:7px;white-space:nowrap}.privacy:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}.layout{display:grid;grid-template-columns:340px minmax(0,1fr);gap:18px;align-items:start}.panel{background:color-mix(in srgb,var(--panel) 94%,transparent);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.panel-head{padding:17px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;align-items:center}.panel-head h2{font-size:15px;font-weight:850;margin:0}.step{font-size:11px;color:var(--gold);font-weight:850;letter-spacing:.1em}.panel-body{padding:18px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:15px}.field label{font-size:12px;font-weight:800;color:var(--muted)}input,textarea,select{width:100%;border:1px solid var(--line);border-radius:11px;padding:11px 12px;background:var(--bg);color:var(--text);outline:none}input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 15%,transparent)}textarea{resize:vertical;min-height:130px}textarea.large{min-height:210px}.hint{font-size:11px;color:var(--muted);margin-top:-5px}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.full{width:100%}.work{min-width:0}.scoregrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:14px}.metric{padding:15px;background:var(--panel);border:1px solid var(--line);border-radius:15px;min-width:0}.metric .label{color:var(--muted);font-size:11px;font-weight:800}.metric .num{font-size:28px;font-weight:900;letter-spacing:-.05em;margin:3px 0}.metric .sub{font-size:11px;color:var(--muted)}.scorebar{height:6px;background:var(--line);border-radius:10px;overflow:hidden;margin-top:10px}.scorebar span{display:block;height:100%;width:0;background:var(--gold);transition:width .3s}.tabs{display:flex;gap:6px;padding:7px;background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow-x:auto}.tab{flex:1;min-width:max-content;padding:10px 12px;border-radius:9px;color:var(--muted);font-weight:800;font-size:12px;border:0;background:transparent}.tab.active{background:var(--gold);color:#111827}.output{padding:18px;min-height:280px}.output h3{font-size:18px;font-weight:900;margin:0 0 5px}.output .desc{color:var(--muted);font-size:12px;margin-bottom:16px}.chips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.chip{padding:5px 9px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);font-size:11px;color:var(--muted)}.chip.good{color:var(--green);border-color:color-mix(in srgb,var(--green) 35%,var(--line))}.chip.miss{color:var(--red);border-color:color-mix(in srgb,var(--red) 35%,var(--line))}.result-text{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.75;color:var(--text);background:var(--bg);border:1px solid var(--line);padding:15px;border-radius:12px;min-height:140px}.output-actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 18px}.subheading{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin:22px 0 9px}.list{display:grid;gap:8px}.listitem{padding:11px 12px;background:var(--panel2);border:1px solid var(--line);border-radius:11px;font-size:12px;color:var(--muted)}.listitem strong{color:var(--text)}.checkrow{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}.checkrow input{width:16px;height:16px;margin-top:2px;accent-color:var(--gold)}.empty{padding:38px 16px;text-align:center;color:var(--muted)}.empty .symbol{font-size:35px;margin-bottom:10px}.empty strong{display:block;color:var(--text);font-size:15px;margin-bottom:5px}.footer{color:var(--muted);font-size:11px;text-align:center;margin-top:24px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:var(--text);color:var(--bg);padding:11px 16px;border-radius:12px;font-weight:800;font-size:12px;opacity:0;pointer-events:none;transition:.2s;z-index:10}.toast.show{opacity:1;transform:translate(-50%,0)}.notice{border:1px solid color-mix(in srgb,var(--gold) 40%,var(--line));background:color-mix(in srgb,var(--gold) 8%,var(--panel));border-radius:12px;padding:12px;font-size:11px;color:var(--muted);margin-top:14px}.notice strong{color:var(--gold)}.hidden{display:none!important}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.hero{align-items:flex-start;flex-direction:column}.privacy{white-space:normal}.scoregrid{grid-template-columns:repeat(3,minmax(0,1fr))}.wrap{padding:14px 12px 80px}.topbar{padding-bottom:17px}.brand{font-size:18px}.top-actions .btn{padding:8px 10px;font-size:12px}}
+@media(max-width:480px){.scoregrid{gap:7px}.metric{padding:10px}.metric .num{font-size:23px}.metric .label{font-size:10px}.metric .sub{font-size:10px}.field-row{grid-template-columns:1fr}.panel-body,.output{padding:14px}.tabs{margin-left:-2px;margin-right:-2px}.tab{padding:9px 10px}.hero h1{font-size:33px}.top-actions .btn span{display:none}}
+@media print{body{background:#fff;color:#111}.topbar,.hero,.sidebar,.tabs,.output-actions,.footer,.top-actions{display:none!important}.wrap{max-width:none;padding:0}.layout{display:block}.panel,.metric{background:#fff;border:1px solid #ddd;color:#111;break-inside:avoid}.result-text{background:#fff;color:#111;border-color:#ddd}.work .panel{display:block}.output{padding:0}.metric .label,.metric .sub{color:#555}}
+a.btn{display:inline-flex;align-items:center;text-decoration:none}
+.sidebar .field-row{grid-template-columns:1fr}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="topbar">
+  <a class="brand" href="#" aria-label="VaultHQ AI home"><span class="logo">V</span><span>VaultHQ AI<small>Application workspace</small></span></a>
+  <div class="top-actions"><button class="btn ghost" id="themeBtn" type="button">☼ <span>Theme</span></button><button class="btn" id="exportBtn" type="button">Export workspace</button></div>
+</header>
+<section class="hero">
+  <div><div class="eyebrow">Your job search, organized</div><h1>Turn one job posting into a <span style="color:var(--gold)">stronger application.</span></h1><p>Compare your CV with a role, spot missing evidence, draft tailored materials, and keep your next steps in one private workspace.</p></div>
+  <div class="privacy">Your text stays in this browser unless you use "Write it for me"</div>
+</section>
+<div class="layout">
+<aside class="sidebar">
+  <section class="panel">
+    <div class="panel-head"><h2>Build your application</h2><span class="step">01 / INPUT</span></div>
+    <div class="panel-body">
+      <div class="field"><label for="candidate">YOUR NAME</label><input id="candidate" placeholder="e.g. Alex Morgan" autocomplete="name"></div>
+      <div class="field-row">
+        <div class="field"><label for="role">TARGET ROLE</label><input id="role" placeholder="e.g. Sales assistant"></div>
+        <div class="field"><label for="company">COMPANY</label><input id="company" placeholder="Company name"></div>
+      </div>
+      <div class="field"><label for="cv">YOUR CV / EXPERIENCE</label><textarea id="cv" class="large" placeholder="Paste your CV text here. Include experience, skills, education and achievements."></textarea><div class="hint">Remove personal details you don't want to process in this browser. Your draft is kept in this browser until you press Clear form.</div></div>
+      <div class="field"><label for="job">JOB DESCRIPTION</label><textarea id="job" class="large" placeholder="Paste the job advert here, including requirements and responsibilities."></textarea></div>
+      <button class="btn primary full" id="analyzeBtn" type="button">Analyze my application ↗</button>
+      <button class="btn ghost full" id="sampleBtn" type="button" style="margin-top:8px">Load sample data</button>
+      <button class="btn ghost full" id="clearBtn" type="button" style="margin-top:8px">Clear form</button>
+      <div class="notice"><strong>Honest scoring:</strong> Match Score measures overlap between the text you provide and the job description. It is not a hiring probability or a guarantee of getting an interview.</div>
+    </div>
+  </section>
+  <section class="panel" style="margin-top:14px">
+    <div class="panel-head"><h2>Application tracker</h2><span class="step">02 / TRACK</span></div>
+    <div class="panel-body">
+      <div class="field"><label for="status">APPLICATION STATUS</label><select id="status"><option>Preparing</option><option>Ready to apply</option><option>Applied</option><option>Interview</option><option>Offer</option><option>Rejected</option></select></div>
+      <div class="field"><label for="deadline">FOLLOW-UP / DEADLINE</label><input id="deadline" type="date"></div>
+      <div class="field"><label for="notes">NOTES</label><textarea id="notes" placeholder="Contact, next step, interview date..." style="min-height:80px"></textarea></div>
+      <button class="btn full" id="saveBtn" type="button">Save application locally</button>
+      <button class="btn ghost full small" id="importBtn" type="button" style="margin-top:8px">Import workspace file</button><input type="file" id="importFile" accept="application/json,.json" hidden>
+      <div id="savedList" class="list" style="margin-top:12px"></div>
+    </div>
+  </section>
+</aside>
+<main class="work">
+  <div class="scoregrid">
+    <div class="metric"><div class="label">MATCH SCORE</div><div class="num" id="matchNum">—<span style="font-size:13px">/100</span></div><div class="sub">Keyword evidence overlap</div><div class="scorebar"><span id="matchBar"></span></div></div>
+    <div class="metric"><div class="label">CV EVIDENCE</div><div class="num" id="evidenceNum">—<span style="font-size:13px">/100</span></div><div class="sub">Top job terms found</div><div class="scorebar"><span id="evidenceBar"></span></div></div>
+    <div class="metric"><div class="label">READINESS</div><div class="num" id="readyNum">—<span style="font-size:13px">/100</span></div><div class="sub">Based on completed inputs</div><div class="scorebar"><span id="readyBar"></span></div></div>
+  </div>
+  <div class="tabs" role="tablist" aria-label="Application tools">
+    <button class="tab active" data-tab="overview" role="tab" aria-selected="true">Overview</button>
+    <button class="tab" data-tab="resume" role="tab" aria-selected="false">CV improvements</button>
+    <button class="tab" data-tab="cover" role="tab" aria-selected="false">Cover letter</button>
+    <button class="tab" data-tab="interview" role="tab" aria-selected="false">Interview prep</button>
+    <button class="tab" data-tab="plan" role="tab" aria-selected="false">Action plan</button>
+    <button class="tab" data-tab="ai" role="tab" aria-selected="false">AI prompts</button>
+  </div>
+  <section class="panel">
+    <div class="panel-head"><h2 id="outTitle">Your application overview</h2><span class="step" id="outStep">READY WHEN YOU ARE</span></div>
+    <div class="output" id="output" role="tabpanel" tabindex="0" aria-label="Results">
+      <div class="empty"><div class="symbol">⌁</div><strong>Your workspace starts here</strong>Paste your CV and the job description, then select <b>Analyze my application</b> to create your tailored workspace.</div>
+    </div>
+  </section>
+</main>
+</div>
+<div class="footer">VaultHQ AI · Local-first workspace · Review all generated content for accuracy before sending.</div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(() => {
+const $ = id => document.getElementById(id);
+const state = {activeTab:'overview', analyzed:false, analysis:null, applications:[], dl:{}};
+const STOP = new Set(('about above after again against all also am an and any are as at be because been before being below between both but by can could did do does doing down during each few for from further had has have having he her here hers herself him himself his how i if in into is it its itself just me more most my myself no nor not of off on once only or other our ours ourselves out over own same she should so some such than that the their theirs them themselves then there these they this those through to too under until up very was we were what when where which while who whom why will with you your yours yourself yourselves job role company candidate required requirements preferred experience skills ability work working team strong excellent including responsible responsibilities using use used knowledge support manage managing develop development communication customer service project data business relevant'.split(/\s+/)));
+const normalize = s => (s||'').toLowerCase().replace(/[^\p{L}\p{N}+#.\s-]/gu,' ').replace(/\s+/g,' ').trim();
+function words(s){return [...new Set(normalize(s).split(' ').map(w=>w.replace(/^[.-]+|[.-]+$/g,'')).filter(w=>w.length>2&&!STOP.has(w)&&!/^\d+$/.test(w)))];}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function val(id){return $(id).value.trim();}
+function notify(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
+function setMetric(id,bar,value,suffix=''){ $(id).innerHTML = `${value}<span style="font-size:13px">${suffix}</span>`; $(bar).style.width = `${Math.max(0,Math.min(100,parseInt(value)||0))}%`; }
+const SUF=['ations','ation','ments','ment','ings','ing','ies','ied','ers','er','ed','es','s','ly'];
+function stem(w){for(const x of SUF){if(w.length-x.length>=4&&w.endsWith(x))return w.slice(0,-x.length);}return w;}
+function analyze(silent){
+ const cv=val('cv'), job=val('job');
+ if(cv.length<30||job.length<30){notify('Paste both your CV and the job description first.');return;}
+ const cvWords=new Set(words(cv).map(stem)), jobWords=words(job);
+ const matched=jobWords.filter(w=>cvWords.has(stem(w))), missing=jobWords.filter(w=>!cvWords.has(stem(w)));
+ const match=Math.round((matched.length/Math.max(1,jobWords.length))*100);
+ const evidence=Math.round((matched.length/Math.max(1,Math.min(25,jobWords.length)))*100);
+ const readiness=Math.round((Math.min(cv.length,1000)/1000*35)+(Math.min(job.length,1000)/1000*25)+(val('candidate')?10:0)+(val('role')?10:0)+(val('company')?5:0)+(matched.length>=8?15:matched.length*1.5));
+ state.analysis={cv,job,cvWords:[...cvWords],jobWords,matched,missing,match,evidence,readiness};
+ state.analyzed=true;
+ setMetric('matchNum','matchBar',match,'/100');setMetric('evidenceNum','evidenceBar',Math.min(100,evidence),'/100');setMetric('readyNum','readyBar',Math.min(100,readiness),'/100');
+ renderTab('overview');if(silent!==true)notify('Analysis ready — review the evidence before applying.');
+}
+function aiPrompts(){
+ const a=state.analysis,n=names();
+ const rules='Use only the information I provide. Do not invent, exaggerate, or assume experience, qualifications, employers, dates, achievements, skills, certifications, metrics, or other facts. If something is missing, label it as a question or suggestion for me to verify.';
+ const voice=' Write in plain, natural, specific language, the way a real person would. Avoid buzzwords and cliches (for example passionate, dynamic, results-driven, leverage, spearheaded, proven track record), avoid em dashes, vary the sentence length, and reuse my own wording from my CV where it fits. Keep it short.';
+ const ctx='\n\nJOB DESCRIPTION:\n'+a.job+'\n\nMY CV:\n'+a.cv;
+ return [
+  ['Job match','Compare my CV with this job description for the '+n.role+' role at '+n.company+'. Return: a concise fit summary, matching evidence, gaps I should address, questions I should investigate, and a recommendation of apply now / apply after tailoring / probably skip. Separate facts from inferences. '+rules+ctx],
+  ['CV tailoring','Review my CV against this job description for the '+n.role+' role at '+n.company+'. Suggest specific rewrites for my existing bullet points so the relevant evidence is easier to see. Keep every rewrite strictly factual.'+voice+' '+rules+ctx],
+  ['Cover letter','Write a concise, professional, non-cliche cover letter for the '+n.role+' position at '+n.company+', based on my CV and this job description. Put [brackets] where I need to add a real detail instead of guessing.'+voice+' '+rules+ctx],
+  ['Interview prep','Act as a hiring manager for the '+n.role+' role at '+n.company+'. Give me 6 likely interview questions (3 about the role, 3 behavioral), and for each one explain how I could structure an answer using only my real background. '+rules+ctx],
+  ['Follow-up messages','Draft two short professional messages for my application to '+n.company+' for the '+n.role+' role: 1) a check-in to send about 7 days after applying, 2) a thank-you note to send within 24 hours after an interview. Use [brackets] for names and details I must fill in.'+voice+' '+rules+ctx]
+ ];
+}
+const GEMINI_MODELS=['gemini-2.5-flash','gemini-flash-latest'];
+function hasKey(){try{return !!localStorage.getItem('vhq-gkey')}catch(e){return false}}
+function hasOk(){try{return localStorage.getItem('vhq-gok')==='1'}catch(e){return false}}
+async function callGemini(key,prompt){
+ for(const m of GEMINI_MODELS){
+  let r;
+  try{r=await fetch('https://generativelanguage.googleapis.com/v1beta/models/'+m+':generateContent',{method:'POST',headers:{'Content-Type':'application/json','x-goog-api-key':key},body:JSON.stringify({contents:[{parts:[{text:prompt}]}],generationConfig:{temperature:0.7,maxOutputTokens:1800}})})}
+  catch(e){throw new Error('Could not reach Google. Check your connection and try again.')}
+  if(r.status===404)continue;
+  if(r.status===400||r.status===401||r.status===403)throw new Error('Google did not accept the key or the request. Check your key and try again.');
+  if(r.status===429)throw new Error('The free limit was reached. Wait a minute and try again.');
+  if(!r.ok)throw new Error('Google returned an error ('+r.status+'). Try again later.');
+  const d=await r.json();
+  const parts=(d.candidates&&d.candidates[0]&&d.candidates[0].content&&d.candidates[0].content.parts)||[];
+  const t=parts.map(x=>x.text||'').join('').trim();
+  if(!t)throw new Error('No text came back. Try again.');
+  return t;
+ }
+ throw new Error('The AI model was not found. Please check for an updated VaultHQ.');
+}
+window.vhqSaveKey=()=>{
+ const k=($('gKey')&&$('gKey').value||'').trim();
+ if(k.length<20){notify('Paste your full Gemini API key.');return}
+ if(!$('gOk')||!$('gOk').checked){notify('Please tick the box to confirm.');return}
+ try{localStorage.setItem('vhq-gkey',k);localStorage.setItem('vhq-gok','1')}catch(e){notify('This browser cannot save the key.');return}
+ renderTab('ai');notify('Key saved in this browser.');
+};
+window.vhqClearKey=()=>{try{localStorage.removeItem('vhq-gkey');localStorage.removeItem('vhq-gok')}catch(e){}renderTab('ai');notify('Key removed.')};
+window.vhqWrite=async i=>{
+ let key='';try{key=localStorage.getItem('vhq-gkey')||''}catch(e){}
+ if(!key||!hasOk()){notify('Add your Gemini key first.');return}
+ const out=$('aiOut'+i),btn=$('aiBtn'+i),cp=$('aiCopy'+i);
+ out.hidden=false;cp.hidden=true;out.textContent='Writing... this can take a few seconds.';btn.disabled=true;
+ try{out.textContent=await callGemini(key,aiPrompts()[i][1]);cp.hidden=false}
+ catch(e){out.textContent=e.message}
+ btn.disabled=false;
+};
+function renderAI(){
+ const ps=aiPrompts(),ready=hasKey()&&hasOk();
+ const box=`<div class="notice" id="aiKeyBox"><strong>Optional: let VaultHQ write it for you.</strong> Add your own free Google Gemini key, then press "Write it for me" under any prompt. The text is based on your CV and the job post. <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener" style="color:var(--gold)">Get a free key ↗</a><br><br>${hasKey()?'<em>A key is saved in this browser.</em> <button class="btn small" onclick="window.vhqClearKey()">Remove key</button>':'<input id="gKey" type="password" placeholder="Paste your Gemini API key" autocomplete="off" style="width:100%;margin:6px 0"><label style="display:flex;gap:8px;align-items:flex-start;font-size:13px;margin:6px 0"><input type="checkbox" id="gOk" style="width:auto;margin-top:3px"><span>I understand that my CV and the job post are sent to Google\'s Gemini service using my key, and that Google\'s own terms and limits apply.</span></label><button class="btn small" onclick="window.vhqSaveKey()">Save key</button>'}<br><span class="hint">Your key stays in this browser. Do not use this on a shared device.</span></div>`;
+ return `<h3>Use these with your own AI</h3><p class="desc">VaultHQ only sends your text to an AI if you add a key and press "Write it for me". Otherwise, copy a prompt and paste it into the AI you already use. Its own limits or fees apply, and a free plan may be enough.</p>${box}<div class="output-actions"><a class="btn small" href="https://chatgpt.com" target="_blank" rel="noopener">Open ChatGPT ↗</a><a class="btn small" href="https://claude.ai" target="_blank" rel="noopener">Open Claude ↗</a><a class="btn small" href="https://gemini.google.com" target="_blank" rel="noopener">Open Gemini ↗</a></div>${ps.map((x,i)=>`<div class="subheading">${i+1}. ${esc(x[0])}</div><div class="result-text" id="aiText${i}">${esc(x[1])}</div><div class="output-actions"><button class="btn primary" onclick="window.vhqCopy('aiText${i}')">Copy prompt</button>${ready?`<button class="btn" id="aiBtn${i}" onclick="window.vhqWrite(${i})">Write it for me</button>`:''}</div><div class="result-text" id="aiOut${i}" hidden></div><div class="output-actions" id="aiCopy${i}" hidden><button class="btn" onclick="window.vhqCopy('aiOut${i}')">Copy result</button></div>`).join('')}<div class="notice"><strong>Make it sound like you:</strong> AI text can sound generic, and no tool can promise it won't. Add one real detail, read it out loud, and rewrite anything you would not say. <strong>Check everything:</strong> AI can make mistakes, so keep only claims you can support.</div>`;
+}
+function names(){return {name:val('candidate')||'Your Name',role:val('role')||'the role',company:val('company')||'the company'};}
+function bulletsForMissing(){const a=state.analysis;return a.missing.slice(0,10);}
+function summary(){
+ const a=state.analysis,n=names(),top=a.matched.slice(0,8);
+ return `${n.name} — ${n.role} application\n\nTarget company: ${n.company}\n\nMATCH SCORE: ${a.match}/100\nThis score is a simple keyword overlap measure, not a prediction of hiring success.\n\nRELEVANT TERMS FOUND\n${top.length?top.map(x=>'• '+x).join('\n'):'• No clear overlap found yet.'}\n\nTERMS TO CHECK AGAINST YOUR REAL EXPERIENCE\n${bulletsForMissing().length?bulletsForMissing().map(x=>'• '+x).join('\n'):'• No obvious missing terms from this keyword comparison.'}\n\nNEXT STEP\nUse the suggestions in the CV improvements and action plan tabs. Only add claims you can honestly support.`;
+}
+function renderOverview(){
+ const a=state.analysis,n=names();
+ return `<h3>Here's where your application stands</h3><p class="desc">A practical text comparison to help you decide what to improve next.</p>
+ <div class="chips"><span class="chip ${a.match>=60?'good':'miss'}">Match score: ${a.match}/100</span><span class="chip good">${a.matched.length} relevant terms found</span><span class="chip miss">${Math.min(a.missing.length,10)} priority terms to review</span></div>
+ <div class="subheading">Strongest overlap</div><div class="chips">${a.matched.slice(0,14).map(x=>`<span class="chip good">${esc(x)}</span>`).join('')||'<span class="chip">No overlap detected yet</span>'}</div>
+ <div class="subheading">Potential gaps — verify these</div><p class="desc">These words appear in the job description but not in your CV text. Some may be irrelevant; do not add skills you do not have.</p><div class="chips">${a.missing.slice(0,18).map(x=>`<span class="chip miss">${esc(x)}</span>`).join('')||'<span class="chip good">No obvious keyword gaps</span>'}</div>
+ <div class="subheading">Your next best moves</div><div class="list"><div class="listitem"><strong>1. Prove the fit.</strong><br>Choose two real achievements that match the job's top responsibilities.</div><div class="listitem"><strong>2. Make the CV specific.</strong><br>Replace vague claims with actions, tools, scope and measurable results where true.</div><div class="listitem"><strong>3. Prepare for proof questions.</strong><br>Use the interview tab to rehearse examples based on your actual experience.</div></div>
+ <div class="output-actions"><button class="btn" onclick="window.vhqCopy('overview')">Copy overview</button><button class="btn" onclick="window.print()">Print / Save PDF</button></div>`;
+}
+function renderResume(){
+ const a=state.analysis,n=names();
+ const matched=a.matched.slice(0,6), missing=a.missing.slice(0,6);
+ const profile=`${n.name} | ${n.role}\n\nProfessional summary (fill in the brackets with true details):\n[Your job title or field] with [number] years of experience in [area]. Strongest in [skill], [skill] and [skill]. Looking for a ${n.role} role at ${n.company} where I can [one concrete thing you want to do].\n\nTerms from the job post that also appear in your CV: ${matched.join(', ')||'none found yet'}. Use only the ones that are true.\n\nIMPORTANT: This is a starting structure. Replace any statement that does not accurately describe your background.`;
+ const improvements=`CV improvement checklist for ${n.role}\n\n1. Put the most relevant experience and skills in the top third of your CV.\n2. Add concrete proof to relevant bullets: action + task + result (numbers only when true).\n3. Mirror the employer's terminology naturally where it accurately describes your experience.\n4. Remove generic claims that are not backed by examples.\n5. Keep formatting consistent and make dates, titles and contact details easy to scan.\n\nRelevant terms already present: ${matched.join(', ')||'Review the job description and your CV side by side.'}\nTerms to check: ${missing.join(', ')||'No major missing keywords found by this basic comparison.'}\n\nBullet formula: “Did [action] using [skill/tool] to achieve [specific result].”`;
+ state.dl.cv=improvements;
+ return `<h3>Make your experience easier to recognize</h3><p class="desc">Use these prompts to strengthen your CV without inventing credentials.</p><div class="subheading">Suggested profile structure</div><div class="result-text" id="resumeText">${esc(profile)}</div><div class="output-actions"><button class="btn primary" onclick="window.vhqCopy('resumeText')">Copy profile</button><button class="btn" onclick="window.vhqDownloadKey('cv-improvements.txt','cv')">Download improvement checklist</button></div><div class="subheading">CV improvement checklist</div><div class="result-text" id="resumeChecklist">${esc(improvements)}</div><div class="subheading">Evidence to add if true</div><div class="list">${(matched.length?matched: ['Relevant skill','Relevant responsibility']).slice(0,5).map(w=>`<div class="listitem"><strong>${esc(w)}</strong><br>Can you show a real example, project, result or task that proves this?</div>`).join('')}</div>`;
+}
+function renderCover(){
+ const a=state.analysis,n=names();
+ const text=`Dear [hiring manager's name or Hiring Team],\n\nI'm applying for the ${n.role} position at ${n.company}. [One sentence on why this role or company interests you, in your own words.]\n\n[Describe one real example: what you did, how you did it, and the result.] The job post mentions ${a.matched.slice(0,3).join(', ')||'several skills'}, and this is where I can help: [one sentence linking your example to the job].\n\n[Optional: one more short example, or something you want to learn in this role.]\n\nI'd be glad to talk more about the role. Thank you for your time.\n\n${n.name}`;
+ return `<h3>A tailored cover letter draft</h3><p class="desc">Fill in every bracket with something true and specific. Short and personal beats polished and generic.</p><div class="result-text" id="coverText">${esc(text)}</div><div class="output-actions"><button class="btn primary" onclick="window.vhqCopy('coverText')">Copy cover letter</button><button class="btn" onclick="window.vhqDownload('cover-letter-draft.txt',document.getElementById('coverText').innerText)">Download .txt</button></div><div class="notice"><strong>Before sending:</strong> add a real example, check the company and role names, and remove anything that doesn't reflect your experience.</div>`;
+}
+function renderInterview(){
+ const a=state.analysis,n=names();
+ const qs=[
+ ['Tell me about yourself.','Give a 45–60 second summary: your current focus, two relevant strengths, and why this role is the logical next step.'],
+ [`Why do you want to work as ${n.role} at ${n.company}?`,'Connect one real reason about the role or company with one relevant skill and one contribution you could make. Avoid generic praise.'],
+ ['Tell me about a time you solved a problem.','Use STAR: Situation, Task, Action, Result. Keep most of the answer on your own actions and the outcome.'],
+ [`How have you used ${a.matched[0]||'a relevant skill'} in practice?`,'Prepare one specific example: what the task was, what you did, what changed, and what you learned.'],
+ ['What would you need to learn first?','Choose an honest development area, explain how you are addressing it, and describe how you learn new processes.'],
+ ['Why should we hire you?','Pick two requirements you can prove, give brief evidence for each, and connect them to the employer’s needs.']
+ ];
+ state.dl.interview=qs.map((q,i)=>`${i+1}. ${q[0]}\nCoach: ${q[1]}\nMy example: __________________\n`).join('\n');
+ return `<h3>Practice answers with evidence</h3><p class="desc">Prepare examples from your own history. These are coaching prompts, not fabricated answers.</p><div class="list">${qs.map((q,i)=>`<div class="listitem"><strong>${i+1}. ${esc(q[0])}</strong><br>${esc(q[1])}<br><span style="color:var(--gold)">Your proof:</span> Add a real example from your work, education, volunteering or projects.</div>`).join('')}</div><div class="output-actions"><button class="btn" onclick="window.vhqDownloadKey('interview-prep.txt','interview')">Download interview prep</button></div>`;
+}
+function renderPlan(){
+ const n=names();
+ const items=[
+ 'Check the company name, role title, contact details and application deadline.',
+ 'Select 2–3 relevant achievements you can explain in detail.',
+ 'Edit your CV profile and bullets to reflect the role truthfully.',
+ 'Replace the placeholder in the cover letter with a real example.',
+ 'Practice the six interview prompts out loud.',
+ 'Proofread the final files and verify every claim.',
+ 'Submit through the employer’s official application channel.',
+ 'Record the date submitted and schedule a polite follow-up if appropriate.'
+ ];
+ state.dl.plan=items.map((x,i)=>`${i+1}. [ ] ${x}`).join('\n');
+ return `<h3>Your application action plan</h3><p class="desc">A practical checklist for ${esc(n.role)} at ${esc(n.company)}. Tick items as you complete them.</p><div id="planChecks">${items.map((x,i)=>`<label class="checkrow"><input type="checkbox" data-plan="${i}"><span>${esc(x)}</span></label>`).join('')}</div><div class="output-actions"><button class="btn" onclick="window.vhqDownloadKey('application-action-plan.txt','plan')">Download checklist</button><button class="btn" onclick="window.vhqCopyPlan()">Copy checked plan</button></div><div class="notice">This workspace helps organize your application. It cannot guarantee interviews or employment outcomes.</div>`;
+}
+function renderTab(tab){
+ state.activeTab=tab;
+ document.querySelectorAll('.tab').forEach(b=>{const active=b.dataset.tab===tab;b.classList.toggle('active',active);b.setAttribute('aria-selected',active?'true':'false')});
+ const titles={overview:['Your application overview','03 / INSIGHTS'],resume:['CV improvements','04 / CV'],cover:['Cover letter','05 / LETTER'],interview:['Interview prep','06 / PRACTICE'],plan:['Action plan','07 / NEXT STEPS'],ai:['AI prompts','08 / YOUR AI']};
+ $('outTitle').textContent=titles[tab][0];$('outStep').textContent=state.analyzed?titles[tab][1]:'ADD YOUR INPUTS';
+ if(!state.analyzed){$('output').innerHTML=`<div class="empty"><div class="symbol">⌁</div><strong>Analyze your CV first</strong>Paste your CV and target job description, then press Analyze my application.</div>`;return;}
+ $('output').innerHTML=({overview:renderOverview,resume:renderResume,cover:renderCover,interview:renderInterview,plan:renderPlan,ai:renderAI})[tab]();
+}
+async function copyText(t){try{await navigator.clipboard.writeText(t);return true}catch(e){try{const ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');ta.style.cssText='position:fixed;top:0;left:0;opacity:0';document.body.appendChild(ta);ta.select();ta.setSelectionRange(0,t.length);const ok=document.execCommand('copy');ta.remove();return ok}catch(e2){return false}}}
+window.vhqCopy = async id => {const el=$(id);if(!el)return;const ok=await copyText(el.innerText||el.textContent);notify(ok?'Copied to clipboard.':'Copy failed. Select the text and copy it manually.')};
+window.vhqDownload = (filename,content) => {const blob=new Blob([content],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
+window.vhqDownloadKey = (fn,key) => window.vhqDownload(fn,(state.dl&&state.dl[key])||'');
+window.vhqCopyPlan = async () => {const rows=[...document.querySelectorAll('[data-plan]')].map(el=>`${el.checked?'[x]':'[ ]'} ${el.parentElement.innerText.trim()}`);const ok=await copyText(rows.join('\n'));notify(ok?'Plan copied.':'Copy failed. Select the text and copy it manually.')};
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>renderTab(b.dataset.tab)));
+$('analyzeBtn').addEventListener('click',()=>analyze());
+$('sampleBtn').addEventListener('click',()=>{$('candidate').value='Alex Morgan';$('role').value='Customer Support Specialist';$('company').value='Northstar Services';$('cv').value='Customer support associate with 2 years of experience handling customer inquiries by email and phone. Used Zendesk and CRM tools to track cases, resolve billing questions, document issues, and escalate technical problems. Worked with a team of 6 to improve response quality. Trained new team members and maintained accurate customer records. Strong written communication, problem solving, time management, and customer service skills.';$('job').value='Customer Support Specialist at Northstar Services. Responsibilities include responding to customer inquiries by email and phone, documenting cases in Zendesk, troubleshooting customer issues, managing escalations, maintaining accurate CRM records, collaborating with cross-functional teams, and delivering excellent customer service. Requirements: strong written communication, problem solving, time management, empathy, experience with CRM software, ability to prioritize multiple tasks, and a customer-focused approach.';saveDraft();notify('Sample data loaded. Press Analyze to see the workspace.')});
+$('themeBtn').addEventListener('click',()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('vhq-theme',t)}catch(e){}});
+try{const savedTheme=localStorage.getItem('vhq-theme');if(savedTheme)document.documentElement.dataset.theme=savedTheme;}catch(e){}
+$('saveBtn').addEventListener('click',()=>{const record={id:Date.now(),name:val('candidate'),role:val('role'),company:val('company'),status:val('status'),deadline:val('deadline'),notes:val('notes'),cv:val('cv'),job:val('job'),savedAt:new Date().toISOString()};if(!record.role&&!record.company&&!record.cv){notify('Add a role or CV before saving.');return;}const arr=readApps();arr.unshift(record);if(writeApps(arr)){loadSaved();notify('Saved on this device.')}else{notify('Local saving unavailable in this browser.')}});
+const STATUSES=['Preparing','Ready to apply','Applied','Interview','Offer','Rejected'];
+function readApps(){try{const x=JSON.parse(localStorage.getItem('vhq-applications')||'[]');return Array.isArray(x)?x:[]}catch(e){return []}}
+function writeApps(arr){try{localStorage.setItem('vhq-applications',JSON.stringify(arr.slice(0,25)));return true}catch(e){return false}}
+function loadSaved(){
+ state.applications=readApps();
+ const apps=state.applications,today=new Date().toISOString().slice(0,10);
+ const sent=apps.filter(a=>['Applied','Interview','Offer','Rejected'].includes(a.status)).length;
+ const replied=apps.filter(a=>['Interview','Offer','Rejected'].includes(a.status)).length;
+ const count=x=>apps.filter(a=>a.status===x).length;
+ const stats=apps.length?`<div class="chips" style="margin-bottom:10px"><span class="chip">Saved ${apps.length}</span><span class="chip">Sent ${sent}</span><span class="chip good">Interviews ${count('Interview')}</span><span class="chip good">Offers ${count('Offer')}</span>${sent?`<span class="chip">Replies ${Math.round(replied/sent*100)}%</span>`:''}</div>`:'';
+ const items=apps.map(a=>{const id=Number(a.id)||0;const due=a.deadline&&String(a.deadline)<today&&['Preparing','Ready to apply','Applied'].includes(a.status);
+  return `<div class="listitem"><strong>${esc(a.role||'Untitled role')}</strong><br>${esc(a.company||'Company not added')}<br><select data-setstatus="${id}" aria-label="Status" style="margin-top:6px;font-size:12px;padding:6px 8px">${STATUSES.map(x=>`<option${x===a.status?' selected':''}>${x}</option>`).join('')}</select>${a.deadline?`<br><span style="${due?'color:var(--red);font-weight:700':''}">${due?'Follow-up overdue: ':'Follow-up: '}${esc(a.deadline)}</span>`:''}<div style="display:flex;justify-content:flex-end;gap:6px;margin-top:8px">${(a.cv||a.job)?`<button class="btn small" data-open="${id}">Open</button>`:''}<button class="btn small" data-delete="${id}">Delete</button></div></div>`}).join('');
+ $('savedList').innerHTML=stats+(items||'<p class="hint">Your saved applications on this device will appear here.</p>');
+ document.querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click',()=>{writeApps(readApps().filter(x=>Number(x.id)!==Number(b.dataset.delete)));loadSaved();notify('Application deleted.')}));
+ document.querySelectorAll('[data-setstatus]').forEach(sel=>sel.addEventListener('change',()=>{const arr=readApps();const r=arr.find(x=>Number(x.id)===Number(sel.dataset.setstatus));if(r){r.status=sel.value;writeApps(arr);loadSaved();notify('Status updated.')}}));
+ document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>{const r=readApps().find(x=>Number(x.id)===Number(b.dataset.open));if(!r)return;const m={candidate:'name',role:'role',company:'company',cv:'cv',job:'job',status:'status',deadline:'deadline',notes:'notes'};Object.keys(m).forEach(k=>{if(typeof r[m[k]]==='string')$(k).value=r[m[k]]});saveDraft();if(val('cv').length>=30&&val('job').length>=30){analyze(true)}else{state.analyzed=false;renderTab(state.activeTab)}notify('Application opened.');window.scrollTo({top:0,behavior:'smooth'})}));
+}
+$('exportBtn').addEventListener('click',()=>{const payload={product:'VaultHQ AI',exportedAt:new Date().toISOString(),profile:{name:val('candidate'),role:val('role'),company:val('company'),cv:val('cv'),jobDescription:val('job'),status:val('status'),deadline:val('deadline'),notes:val('notes')},analysis:state.analysis,applications:state.applications};window.vhqDownload('vaulthq-workspace.json',JSON.stringify(payload,null,2));});
+const FIELDS=['candidate','role','company','cv','job','status','deadline','notes'];
+let dt;function saveDraft(){clearTimeout(dt);dt=setTimeout(()=>{try{const o={};FIELDS.forEach(k=>o[k]=$(k).value);localStorage.setItem('vhq-draft',JSON.stringify(o))}catch(e){}},400)}
+function restoreDraft(){try{const o=JSON.parse(localStorage.getItem('vhq-draft')||'null');if(o&&typeof o==='object'){FIELDS.forEach(k=>{if(typeof o[k]==='string')$(k).value=o[k]})}}catch(e){}if(val('cv').length>=30&&val('job').length>=30)analyze(true);}
+FIELDS.forEach(k=>{$(k).addEventListener('input',saveDraft);$(k).addEventListener('change',saveDraft)});
+$('clearBtn').addEventListener('click',()=>{if(!confirm('Clear the form and your saved draft? Your saved applications are kept.'))return;FIELDS.forEach(k=>{$(k).value=k==='status'?'Preparing':''});try{localStorage.removeItem('vhq-draft')}catch(e){}state.analyzed=false;state.analysis=null;['matchNum','readyNum'].forEach(id=>{$(id).innerHTML='—<span style="font-size:13px">/100</span>'});$('evidenceNum').innerHTML='—<span style="font-size:13px">/100</span>';['matchBar','evidenceBar','readyBar'].forEach(id=>{$(id).style.width='0%'});renderTab(state.activeTab);notify('Form cleared.')});
+$('importBtn').addEventListener('click',()=>$('importFile').click());
+$('importFile').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!d||d.product!=='VaultHQ AI')throw new Error('bad');const p=d.profile||{};const set=(id,v)=>{if(typeof v==='string')$(id).value=v};set('candidate',p.name);set('role',p.role);set('company',p.company);set('cv',p.cv);set('job',p.jobDescription);set('status',p.status);set('deadline',p.deadline);set('notes',p.notes);const cur=readApps(),inc=Array.isArray(d.applications)?d.applications.filter(a=>a&&typeof a==='object'&&a.id!=null):[];const ids=new Set(cur.map(a=>Number(a.id)));writeApps(cur.concat(inc.filter(a=>!ids.has(Number(a.id)))));loadSaved();saveDraft();if(val('cv').length>=30&&val('job').length>=30)analyze(true);notify('Workspace imported.')}catch(err){notify('That file is not a VaultHQ workspace export.')}};r.readAsText(f);e.target.value='';});
+const tabEls=[...document.querySelectorAll('.tab')];
+tabEls.forEach((b,i)=>b.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const t=tabEls[(i+(e.key==='ArrowRight'?1:tabEls.length-1))%tabEls.length];t.focus();renderTab(t.dataset.tab)}}));
+restoreDraft();loadSaved();
+})();
+</script>
+</body>
+</html>

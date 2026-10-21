@@ -3,22 +3,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>VaultHQ AI — Job Application Copilot</title>
 <meta name="description" content="Organize your applications, improve your CV and prepare for interviews with one simple AI toolkit. $7 one-time, no subscription.">
-<meta property="og:title" content="VaultHQ AI — Job Application Copilot"><meta property="og:description" content="Stop job-search chaos. $7 one-time, no subscription."><meta name="theme-color" content="#3B2FD9">
+<meta property="og:title" content="VaultHQ AI — Job Application Copilot"><meta property="og:description" content="Stop job-search chaos. $7 one-time, no subscription."><meta name="theme-color" content="#E8202F">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#EFEBFF;--surface:#fff;--ink:#1A1442;--mute:#5E5890;--brand:#3B2FD9;--brand2:#241A8F;--amber:#FFB547;--line:#D9D2FA;--glow:#C9BFFF;
+:root{--bg:#0B0B0D;--surface:#17171B;--ink:#F7F3F3;--mute:#B8A9AA;--brand:#E8202F;--brand2:#A50F1C;--amber:#FFB547;--line:#3A2326;--glow:#E8202F;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#120D33;--surface:#1D1650;--ink:#F1EDFF;--mute:#A9A1E0;--line:#352C7A;--glow:#3B2FD9}}
-:root[data-theme="dark"]{--bg:#120D33;--surface:#1D1650;--ink:#F1EDFF;--mute:#A9A1E0;--line:#352C7A;--glow:#3B2FD9}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B0B0D;--surface:#17171B;--ink:#F7F3F3;--mute:#B8A9AA;--line:#3A2326;--glow:#E8202F}}
+:root[data-theme="dark"]{--bg:#0B0B0D;--surface:#17171B;--ink:#F7F3F3;--mute:#B8A9AA;--line:#3A2326;--glow:#E8202F}
 *{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.5}
 .bar{background:var(--brand2);color:#fff;text-align:center;padding:10px 16px;font-size:14px;font-weight:600}
 .wrap{max-width:1180px;margin:0 auto;padding:24px 20px 64px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
-.stage{position:sticky;top:16px;border-radius:32px;overflow:hidden;aspect-ratio:1/1.05;background:radial-gradient(circle at 50% 35%,#3a2bb8 0%,#150f45 45%,#05030f 100%);border:1px solid rgba(217,169,59,.55);box-shadow:0 30px 60px -30px #3B2FD9;touch-action:pan-y}
+.stage{position:sticky;top:16px;border-radius:32px;overflow:hidden;aspect-ratio:1/1.05;background:radial-gradient(circle at 50% 35%,#b3101f 0%,#3a0a10 45%,#070304 100%);border:1px solid rgba(232,32,47,.55);box-shadow:0 30px 60px -30px #E8202F;touch-action:pan-y}
 .stage canvas{width:100%;height:100%;display:block;cursor:grab}
-.pill{position:absolute;z-index:2;left:16px;top:16px;background:linear-gradient(180deg,#FFE29A,#D9A93B);color:#1A1442;padding:6px 14px;border-radius:99px;font-weight:700;font-size:14px}
+.pill{position:absolute;z-index:2;left:16px;top:16px;background:linear-gradient(180deg,#FF4B58,#D91A2B);color:#fff;padding:6px 14px;border-radius:99px;font-weight:700;font-size:14px}
 .chips{position:absolute;right:14px;top:14px;display:grid;gap:10px}
-.chips span{z-index:2;background:rgba(10,6,40,.7);border:1px solid rgba(217,169,59,.6);color:#FFE9B0;border-radius:14px;width:84px;padding:10px 4px;text-align:center;font-size:12px;font-weight:600;line-height:1.2;box-shadow:0 10px 24px rgba(36,26,143,.35)}
+.chips span{z-index:2;background:rgba(10,2,4,.7);border:1px solid rgba(232,32,47,.6);color:#FFE0E2;border-radius:14px;width:84px;padding:10px 4px;text-align:center;font-size:12px;font-weight:600;line-height:1.2;box-shadow:0 10px 24px rgba(165,15,28,.35)}
 .chips b{display:block;font-size:20px}
 .hint{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:13px;color:rgba(255,235,190,.75)}
 h1{font-size:clamp(34px,5vw,56px);line-height:1.02;margin:0 0 12px;font-weight:800;letter-spacing:-.02em}
@@ -61,7 +61,7 @@ details p{margin:0 0 14px;color:var(--mute)}
 .send{margin-top:14px;width:100%;border:0;cursor:pointer;font:inherit;font-weight:800;font-size:17px;color:#fff;background:linear-gradient(180deg,var(--brand),var(--brand2));padding:14px;border-radius:14px}
 .msg{min-height:20px;font-size:14px;color:var(--mute);margin:8px 0 0}
 .list{display:grid;gap:12px}.item p{margin:6px 0 0}.item small{color:var(--mute)}.empty{color:var(--mute);padding:20px;border:1px dashed var(--line);border-radius:18px}
-.stage.nogl canvas{display:none}.stage.nogl::after{content:"VaultHQ AI";position:absolute;inset:0;display:grid;place-items:end center;padding-bottom:56px;font-size:clamp(32px,9vw,48px);font-weight:800;color:#FFE9B0}
+.stage.nogl canvas{display:none}.stage.nogl::after{content:"VaultHQ AI";position:absolute;inset:0;display:grid;place-items:end center;padding-bottom:56px;font-size:clamp(32px,9vw,48px);font-weight:800;color:#FFE0E2}
 .sec{grid-column:1/-1;margin-top:24px}.sec h2{font-size:clamp(28px,4vw,44px);margin:0 0 8px;letter-spacing:-.02em}.sec>p{color:var(--mute);margin:0 0 20px;max-width:60ch}
 .pv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.pv .box{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;font-size:13px;overflow:hidden}
 .pv h3{margin:0 0 10px;font-size:16px}.row{display:grid;grid-template-columns:1.2fr 1.2fr 1fr;gap:6px;padding:7px 0;border-bottom:1px solid var(--line)}.row b{color:var(--brand)}
@@ -75,28 +75,28 @@ footer{max-width:1180px;margin:0 auto;padding:0 20px 110px;color:var(--mute);fon
 @media(max-width:900px){.wrap{grid-template-columns:1fr}.stage{position:relative;top:0}.grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.grid{grid-template-columns:1fr}.chips span{width:70px;font-size:11px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
-#intro{position:fixed;inset:0;z-index:1000;background:#030109;color:#fff;display:grid;grid-template-rows:auto 1fr auto;justify-items:center;text-align:center;padding:calc(env(safe-area-inset-top,0px) + 18px) 20px calc(env(safe-area-inset-bottom,0px) + 22px);overflow:hidden;transition:opacity .6s,transform .6s}
+#intro{position:fixed;inset:0;z-index:1000;background:#050202;color:#fff;display:grid;grid-template-rows:auto 1fr auto;justify-items:center;text-align:center;padding:calc(env(safe-area-inset-top,0px) + 18px) 20px calc(env(safe-area-inset-bottom,0px) + 22px);overflow:hidden;transition:opacity .6s,transform .6s}
 #intro canvas{position:absolute;inset:0;width:100%;height:100%}
-#intro .vig{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at center,transparent 35%,rgba(3,1,9,.7) 100%),linear-gradient(transparent 55%,rgba(3,1,9,.75))}
+#intro .vig{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at center,transparent 35%,rgba(5,2,2,.7) 100%),linear-gradient(transparent 55%,rgba(5,2,2,.75))}
 #intro.out{opacity:0;transform:scale(1.15);pointer-events:none}
 #itop,#ibot{position:relative;z-index:2;opacity:0;transform:translateY(24px);pointer-events:none;transition:opacity .9s,transform .9s}
 #intro.show #itop,#intro.show #ibot{opacity:1;transform:none;pointer-events:auto}
 #intro.show #ibot{transition-delay:.3s}
 #itop{perspective:900px}#ititle{transition:transform .15s ease-out}
 #intro.go #itop{opacity:0;transform:translateY(-30px);transition-delay:0s}#intro.go #ibot{opacity:0;transform:translateY(30px);transition-delay:0s;transition-duration:.5s}
-#intro .flash{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;background:radial-gradient(circle,#fff,#ffe2a0 40%,transparent 75%)}
+#intro .flash{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;background:radial-gradient(circle,#fff,#ff9aa2 40%,transparent 75%)}
 #intro.bang .flash{animation:bf 1.8s ease-out forwards}
 #intro.go .flash{animation:fl .7s ease-in .8s forwards}
 @keyframes bf{0%{opacity:0}8%{opacity:1}40%{opacity:.35}100%{opacity:0}}
 @keyframes fl{from{opacity:0}to{opacity:1}}
-.wel{letter-spacing:.4em;text-transform:uppercase;font-size:13px;color:#FFE9B0;margin:0 0 4px;text-shadow:0 2px 12px #000}
-.big{font-size:clamp(52px,13vw,120px);line-height:1;font-weight:800;letter-spacing:-.03em;color:#E9B949;background:linear-gradient(180deg,#FFF1B8 0%,#D9A93B 55%,#8A5F12 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 0 #8A5F12) drop-shadow(0 5px 0 #5c3f0b) drop-shadow(0 18px 26px rgba(0,0,0,.7))}
+.wel{letter-spacing:.4em;text-transform:uppercase;font-size:13px;color:#FFE0E2;margin:0 0 4px;text-shadow:0 2px 12px #000}
+.big{font-size:clamp(52px,13vw,120px);line-height:1;font-weight:800;letter-spacing:-.03em;color:#E8202F;background:linear-gradient(180deg,#FF8A93 0%,#E8202F 55%,#7A0A14 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 0 #7A0A14) drop-shadow(0 5px 0 #4a0810) drop-shadow(0 18px 26px rgba(0,0,0,.7))}
 .hook{font-size:clamp(20px,4vw,32px);font-weight:800;line-height:1.25;margin:0 auto 6px;text-shadow:0 2px 14px rgba(0,0,0,.9)}
-.hook em{font-style:normal;color:#FFD98A}
-.sub{color:#D8D1FF;margin:0 auto 18px;max-width:40ch;font-size:15px;text-shadow:0 2px 12px #000}
-.shop{border:0;cursor:pointer;font:inherit;font-weight:800;font-size:19px;color:#1A1442;padding:16px 42px;border-radius:99px;background:linear-gradient(180deg,#FFE29A,#D9A93B);box-shadow:0 0 0 0 rgba(255,217,138,.6),0 18px 34px -10px #D9A93B;animation:pulse 2s infinite}
+.hook em{font-style:normal;color:#FF8A93}
+.sub{color:#F0D5D8;margin:0 auto 18px;max-width:40ch;font-size:15px;text-shadow:0 2px 12px #000}
+.shop{border:0;cursor:pointer;font:inherit;font-weight:800;font-size:19px;color:#fff;padding:16px 42px;border-radius:99px;background:linear-gradient(180deg,#FF4B58,#E8202F);box-shadow:0 0 0 0 rgba(232,32,47,.6),0 18px 34px -10px #E8202F;animation:pulse 2s infinite}
 .shop:focus-visible{outline:3px solid #fff;outline-offset:4px}
-@keyframes pulse{70%{box-shadow:0 0 0 22px rgba(255,217,138,0),0 18px 34px -10px #D9A93B}100%{box-shadow:0 0 0 0 rgba(255,217,138,0),0 18px 34px -10px #D9A93B}}
+@keyframes pulse{70%{box-shadow:0 0 0 22px rgba(232,32,47,0),0 18px 34px -10px #E8202F}100%{box-shadow:0 0 0 0 rgba(232,32,47,0),0 18px 34px -10px #E8202F}}
 body.lock{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.shop{animation:none}#itop,#ibot{transition:none}}
 .how .step{display:grid;grid-template-columns:1.25fr 1fr;gap:32px;align-items:center;margin:0 0 44px}
@@ -104,11 +104,20 @@ body.lock{overflow:hidden}
 .shots{display:grid;gap:14px;perspective:1000px}.shots.duo{grid-template-columns:1fr 1fr}.shots.narrow{max-width:340px;margin:0 auto}
 .shots img{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--line);box-shadow:0 30px 50px -28px var(--brand);transition:transform .3s,box-shadow .3s;background:var(--surface)}
 .shots img:hover{transform:rotateY(-5deg) rotateX(3deg) translateZ(8px)}
-.stx .num{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:linear-gradient(180deg,#FFE29A,#D9A93B);color:#1A1442;font-weight:800;font-size:20px;margin-bottom:10px;box-shadow:0 8px 0 -2px #8A5F12}
+.stx .num{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:linear-gradient(180deg,#FF4B58,#D91A2B);color:#fff;font-weight:800;font-size:20px;margin-bottom:10px;box-shadow:0 8px 0 -2px #7A0A14}
 .stx h3{margin:0 0 8px;font-size:clamp(22px,3vw,30px);letter-spacing:-.01em}.stx p{margin:0;color:var(--mute);font-size:17px;max-width:48ch}.stx b{color:var(--ink)}
 @media(max-width:900px){.how .step{grid-template-columns:1fr;gap:16px}.how .step:nth-child(even) .shots{order:0}}
 @media(max-width:480px){.shots.duo{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.shots img{transition:none}}
+
+.rsum{font-weight:800;font-size:18px;margin:0 0 14px;color:var(--ink)}
+.rlist{display:grid;gap:12px;max-width:640px;margin:0 0 8px}
+.rcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.rcard .rtop{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.rcard .stars{font-size:18px}.rcard strong{font-weight:800}.rcard small{color:var(--mute)}
+.rcard p{margin:8px 0 0;line-height:1.5;word-break:break-word}
+.pick button:not(.on){color:#7d5a5e}
+.rempty{color:var(--mute);margin:0 0 6px}.rh{font-size:22px;margin:26px 0 6px}
 </style><script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head><body class="lock">
@@ -125,7 +134,7 @@ body.lock{overflow:hidden}
 <div class="bar">One-time $7 · No subscription · Instant download</div>
 <main class="wrap">
  <section class="stage" id="stage" aria-label="3D view of the VaultHQ AI kit">
-  <span class="pill">Bestseller</span>
+  
   <div class="chips"><span><b>$7</b>One-time</span><span><b>0</b>Monthly fees</span><span><b>3</b>AI tools</span></div>
   <canvas id="c"></canvas><div class="hint">Drag to spin the kit</div>
  </section>
@@ -166,15 +175,20 @@ body.lock{overflow:hidden}
  <section class="sec"><h2>Better bullets, better replies</h2><p>An illustration of the kind of rewrite the prompts help with.</p>
   <div class="ba"><div><b>Before</b>Responsible for helping customers with their questions.</div><div class="af"><b>After</b>Resolved 40+ customer questions a week and kept response times under one hour.</div></div></section>
  <section class="rev" id="reviews">
-  <h2>Leave a review</h2>
-  <p style="color:var(--mute);margin:0 0 18px">Used the kit? Rate it and tell us what you think.</p>
+  <h2>Reviews</h2>
+  <div class="rsum" id="rsum" aria-live="polite"></div>
+  <div class="rlist" id="rlist"></div>
+  <h3 class="rh">Leave a review</h3>
+  <p style="color:var(--mute);margin:0 0 18px">Used the kit? Rate it and tell us what you think. Reviews appear here after a quick check.</p>
   <div class="form" style="max-width:640px">
    <strong>Your rating</strong>
    <div class="pick" id="pick" role="radiogroup" aria-label="Star rating"></div>
    <label for="nm">Your name</label><input id="nm" maxlength="40" autocomplete="name">
    <label for="cm">Your comment</label><textarea id="cm" rows="4" maxlength="500"></textarea>
+   <input id="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
    <button class="send" id="post" type="button">Send review</button>
    <p class="msg" id="msg" role="status"></p>
+   <p style="color:var(--mute);font-size:13px;margin:10px 0 0">When you send a review, your name, rating and comment are saved in our review database. Reviews are written by visitors and checked for spam before they appear on this page. We cannot verify that every reviewer bought the product.</p>
   </div>
  </section>
  <section class="sec"><h2>Frequently asked questions</h2>
@@ -187,8 +201,8 @@ body.lock{overflow:hidden}
  <section class="sec ab"><h2>About VaultHQ</h2><p>VaultHQ makes simple AI tools for people who are applying for jobs. Follow along for tips and updates.</p><a href="https://www.tiktok.com/@vaulthq0" target="_blank" rel="noopener">@vaulthq0 on TikTok</a></section>
 </main>
 <footer>
- <details><summary>Privacy</summary><p>This page does not collect personal data. Payments are handled by Gumroad under its own policy. Emails to support are used only to reply to you.</p></details>
- <details><summary>Refunds and help</summary><p>VaultHQ AI is a digital download, so there are no refunds. If you download the kit and think something is broken or not working, email a screenshot to <a href="mailto:vaulthqsupport@gmail.com" style="color:var(--brand);font-weight:700">vaulthqsupport@gmail.com</a> and we will fix it for you as fast as possible.</p></details>
+ <details><summary>Privacy</summary><p>This page uses simple visit counts (Vercel Web Analytics) to see how many people visit. If you leave a review, your name, rating and comment are stored in a review database (Supabase) and an approved review is shown on this page. If you email us, your message is used only to reply. Payments are handled by Gumroad under its own policy.</p></details>
+ <details><summary>Refunds and help</summary><p>We want you to be happy with VaultHQ AI. If it doesn't work for you, or something isn't right, email us at <a href="mailto:vaulthqsupport@gmail.com" style="color:var(--brand);font-weight:700">vaulthqsupport@gmail.com</a> within 14 days of your purchase and we'll gladly help. Please include your order email and, if you can, a screenshot of the problem. If we can't fix it, we'll refund you. Thank you for giving it a try!</p></details>
  <details><summary>Terms</summary><p>VaultHQ AI is a digital product for personal use. Please don't resell or share the files. Results depend on your own effort and the AI tools you use, and no job is guaranteed.</p></details>
  <p>© VaultHQ</p>
 </footer>
@@ -204,14 +218,14 @@ r.setPixelRatio(Math.min(devicePixelRatio,matchMedia('(pointer:coarse)').matches
 var s=new THREE.Scene(),cam=new THREE.PerspectiveCamera(35,1,.1,50);cam.position.set(0,0,9.5);
 s.add(new THREE.AmbientLight(0xffffff,.35));
 var key=new THREE.PointLight(0xffffff,1.2);key.position.set(4,5,7);s.add(key);
-var rim=new THREE.PointLight(0x7a6cff,1.6);rim.position.set(-6,2,-3);s.add(rim);
+var rim=new THREE.PointLight(0xff4d5a,1.6);rim.position.set(-6,2,-3);s.add(rim);
 var glint=new THREE.PointLight(0xffd98a,2.2,16);glint.position.set(0,1,5);s.add(glint);
 var GOLD=0xD9A93B;
 function tex(w,h,fn){var c=document.createElement('canvas');c.width=w;c.height=h;fn(c.getContext('2d'),w,h);var t=new THREE.CanvasTexture(c);t.anisotropy=8;t.encoding=THREE.sRGBEncoding;return t}
 function rr(x,a,b,w,h,q){x.beginPath();x.moveTo(a+q,b);x.arcTo(a+w,b,a+w,b+h,q);x.arcTo(a+w,b+h,a,b+h,q);x.arcTo(a,b+h,a,b,q);x.arcTo(a,b,a+w,b,q);x.closePath()}
 function gold(x,y0,y1){var g=x.createLinearGradient(0,y0,0,y1);g.addColorStop(0,'#FFF1B8');g.addColorStop(.5,'#D9A93B');g.addColorStop(1,'#8A5F12');return g}
 var front=tex(512,680,function(x,w,h){
- var g=x.createLinearGradient(0,0,w,h);g.addColorStop(0,'#2A1E9E');g.addColorStop(.55,'#120C45');g.addColorStop(1,'#05030F');x.fillStyle=g;x.fillRect(0,0,w,h);
+ var g=x.createLinearGradient(0,0,w,h);g.addColorStop(0,'#C4182A');g.addColorStop(.55,'#2A070B');g.addColorStop(1,'#050202');x.fillStyle=g;x.fillRect(0,0,w,h);
  x.strokeStyle=gold(x,0,h);x.lineWidth=5;rr(x,26,26,w-52,h-52,26);x.stroke();x.lineWidth=2;rr(x,40,40,w-80,h-80,18);x.stroke();
  x.lineWidth=10;x.beginPath();x.arc(w/2,200,70,0,7);x.stroke();
  x.fillStyle=gold(x,150,250);x.beginPath();x.arc(w/2,188,18,0,7);x.fill();x.fillRect(w/2-8,196,16,44);
@@ -219,7 +233,7 @@ var front=tex(512,680,function(x,w,h){
  x.font='800 56px Bricolage Grotesque,sans-serif';x.fillText('AI',w/2,440);
  x.fillStyle='rgba(255,240,200,.9)';x.font='600 25px Bricolage Grotesque,sans-serif';x.fillText('Job Application Copilot',w/2,508);
  x.font='400 20px Bricolage Grotesque,sans-serif';x.fillText('Track  \u00b7  Improve  \u00b7  Interview',w/2,566)});
-var darkM=new THREE.MeshPhysicalMaterial({color:0x14104a,metalness:.85,roughness:.28,clearcoat:1,clearcoatRoughness:.1});
+var darkM=new THREE.MeshPhysicalMaterial({color:0x1a0608,metalness:.85,roughness:.28,clearcoat:1,clearcoatRoughness:.1});
 var frontM=new THREE.MeshPhysicalMaterial({map:front,metalness:.35,roughness:.3,clearcoat:1,clearcoatRoughness:.08});
 var goldM=new THREE.MeshStandardMaterial({color:GOLD,metalness:1,roughness:.22});
 var box=new THREE.Mesh(new THREE.BoxGeometry(2.3,3,.7),[darkM,darkM,darkM,darkM,frontM,darkM]);
@@ -258,16 +272,38 @@ requestAnimationFrame(loop);
 </script>
 <script>
 (function(){
-var sel=0,pick=document.getElementById('pick'),msg=document.getElementById('msg');
+/* REVIEWS DATABASE: paste your Supabase "Project URL" and "anon public" key between the quotes (see reviews-setup.txt). Never paste the service_role / secret key. */
+var SB_URL='', SB_KEY='';
+var ready=!!(SB_URL&&SB_KEY);
+var sel=0,pick=document.getElementById('pick'),msg=document.getElementById('msg'),post=document.getElementById('post');
 var btns=[1,2,3,4,5].map(function(n){var b=document.createElement('button');b.type='button';b.textContent='★';b.setAttribute('role','radio');b.setAttribute('aria-label',n+' star'+(n>1?'s':''));b.setAttribute('aria-checked','false');b.onclick=function(){sel=n;paint()};pick.appendChild(b);return b});
 function paint(){btns.forEach(function(b,i){b.classList.toggle('on',i<sel);b.setAttribute('aria-checked',String(i+1===sel))})}
-document.getElementById('post').onclick=function(){
+function H(x){var h={'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY};for(var k in x)h[k]=x[k];return h}
+function load(){
+ if(!ready)return;
+ fetch(SB_URL+'/rest/v1/reviews?select=name,rating,comment,created_at&approved=eq.true&order=created_at.desc&limit=50',{headers:H()})
+ .then(function(r){if(!r.ok)throw new Error('load');return r.json()})
+ .then(function(rows){window.VAULTHQ_REVIEWS=rows.map(function(r){return{name:r.name,rating:r.rating,text:r.comment,date:(r.created_at||'').slice(0,10)}});window.vhqRenderReviews()})
+ .catch(function(){});
+}
+function last(){try{return Number(localStorage.getItem('vhq_rv'))||0}catch(e){return 0}}
+post.onclick=function(){
+ if(!ready){msg.textContent='Reviews are opening soon. Please check back later.';return}
+ if(document.getElementById('hp').value)return;
  var n=document.getElementById('nm').value.trim()||'Anonymous',c=document.getElementById('cm').value.trim();
  if(!sel){msg.textContent='Choose a star rating from 1 to 5.';return}
  if(!c){msg.textContent='Write a short comment.';return}
- var body='Rating: '+sel+'/5\nName: '+n+'\n\n'+c;
- location.href='mailto:vaulthqsupport@gmail.com?subject='+encodeURIComponent('VaultHQ AI review: '+sel+' stars')+'&body='+encodeURIComponent(body);
- msg.textContent='Your email app should open. Press send to submit your review. Thank you!'};
+ if(Date.now()-last()<600000){msg.textContent='Thanks! You already sent a review a moment ago.';return}
+ post.disabled=true;msg.textContent='Sending...';
+ fetch(SB_URL+'/rest/v1/reviews',{method:'POST',headers:H({'Content-Type':'application/json','Prefer':'return=minimal'}),body:JSON.stringify({name:n.slice(0,40),rating:sel,comment:c.slice(0,500)})})
+ .then(function(r){if(!r.ok)throw new Error('save');try{localStorage.setItem('vhq_rv',String(Date.now()))}catch(e){}
+  document.getElementById('cm').value='';document.getElementById('nm').value='';sel=0;paint();
+  msg.textContent='Thank you! Your review was saved and will appear here after a quick check.'})
+ .catch(function(){msg.textContent='Sorry, your review could not be sent. Please try again later.'})
+ .then(function(){post.disabled=false});
+};
+if(!ready)msg.textContent='Reviews are opening soon.';
+load();
 })();
 </script>
 <script>
@@ -284,14 +320,16 @@ var VG='attribute float aSp;attribute vec3 aCol;uniform float uQ,uSize,uScale,uT
 var FG='uniform sampler2D uMap;varying vec3 vC;void main(){vec4 t=texture2D(uMap,gl_PointCoord);gl_FragColor=vec4(vC,t.a);}';
 var VS='attribute float aS;uniform float uQ,uSize,uScale;void main(){float f=(1.-exp(-1.6*max(uQ,0.)))/1.6*aS;vec4 mv=modelViewMatrix*vec4(position*f,1.);gl_Position=projectionMatrix*mv;gl_PointSize=uSize*uScale/max(.1,-mv.z);}';
 var FS='uniform sampler2D uMap;uniform float uO;void main(){vec4 t=texture2D(uMap,gl_PointCoord);gl_FragColor=vec4(1.,.945,.72,t.a*uO);}';
+var inapp=/musical_ly|TikTok|Bytedance/i.test(navigator.userAgent);
 try{
+ if(inapp)throw new Error('skip');
  PR=Math.min(devicePixelRatio||1,low?1.25:1.75);
  r=new THREE.WebGLRenderer({canvas:cv,antialias:!low,alpha:true,powerPreference:'high-performance'});r.setPixelRatio(PR);
  s=new THREE.Scene();cam=new THREE.PerspectiveCamera(55,1,.1,200);
  var c0=document.createElement('canvas');c0.width=c0.height=64;var x0=c0.getContext('2d'),g0=x0.createRadialGradient(32,32,0,32,32,32);g0.addColorStop(0,'rgba(255,255,255,1)');g0.addColorStop(.3,'rgba(255,255,255,.6)');g0.addColorStop(1,'rgba(255,255,255,0)');x0.fillStyle=g0;x0.fillRect(0,0,64,64);
  var tex=new THREE.CanvasTexture(c0);
  var P=new Float32Array(N*3),C=new Float32Array(N*3),S=new Float32Array(N);
- var A1=new THREE.Color(0xFFF1B8),A2=new THREE.Color(0xD9A93B),A3=new THREE.Color(0x7a6cff),A4=new THREE.Color(0x3B2FD9),cc=new THREE.Color();
+ var A1=new THREE.Color(0xFFF1B8),A2=new THREE.Color(0xD9A93B),A3=new THREE.Color(0xff4d5a),A4=new THREE.Color(0xE8202F),cc=new THREE.Color();
  for(var i=0;i<N;i++){var rr=Math.pow(Math.random(),1.5)*9+.15,a=(i%3)*2.0944+rr*1.1+(Math.random()-.5)*(.35+rr*.12);
   P[i*3]=Math.cos(a)*rr;P[i*3+2]=Math.sin(a)*rr;P[i*3+1]=(Math.random()-.5)*(1.4*Math.exp(-rr*.35)+.08);S[i]=.6+Math.random()*.6;
   var t=rr/9.15;if(t<.3)cc.copy(A1).lerp(A2,t/.3);else if(t<.65)cc.copy(A2).lerp(A3,(t-.3)/.35);else cc.copy(A3).lerp(A4,(t-.65)/.35);
@@ -303,7 +341,7 @@ try{
  grp=new THREE.Group();grp.rotation.x=.95;grp.add(gal);s.add(grp);
  var nc0=document.createElement('canvas');nc0.width=nc0.height=128;var nx=nc0.getContext('2d');nx.globalCompositeOperation='lighter';for(var b=0;b<46;b++){var bx=64+(Math.random()-.5)*70,by=64+(Math.random()-.5)*70,br=10+Math.random()*26,bgr=nx.createRadialGradient(bx,by,0,bx,by,br);bgr.addColorStop(0,'rgba(255,255,255,.16)');bgr.addColorStop(1,'rgba(255,255,255,0)');nx.fillStyle=bgr;nx.fillRect(0,0,128,128)}
  nx.globalCompositeOperation='destination-in';var nm=nx.createRadialGradient(64,64,0,64,64,64);nm.addColorStop(0,'rgba(0,0,0,1)');nm.addColorStop(.7,'rgba(0,0,0,.6)');nm.addColorStop(1,'rgba(0,0,0,0)');nx.fillStyle=nm;nx.fillRect(0,0,128,128);
- var ntex=new THREE.CanvasTexture(nc0),NC=[0xff8a3d,0xd94bd6,0x6a5cff,0x2fb6ff],NB=low?0:12;
+ var ntex=new THREE.CanvasTexture(nc0),NC=[0xff8a3d,0xb3101f,0xff3b47,0xff6a3d],NB=low?0:12;
  for(var z=0;z<NB;z++){var rr2=1.2+Math.random()*7.2,a2=(z%3)*2.0944+rr2*1.1+(Math.random()-.5)*.8,col2=rr2<3?NC[0]:rr2<5?NC[1+(z%2)]:NC[2+(z%2)];var sprn=new THREE.Sprite(new THREE.SpriteMaterial({map:ntex,color:col2,blending:THREE.AdditiveBlending,transparent:true,depthWrite:false,opacity:0}));sprn.scale.setScalar(3.5+Math.random()*(low?3:5));sprn.userData={p:new THREE.Vector3(Math.cos(a2)*rr2,(Math.random()-.5)*.6,Math.sin(a2)*rr2),o:.12+Math.random()*.14};grp.add(sprn);nb.push(sprn)}
  var M=low?600:1200,sv=new Float32Array(M*3);for(var j=0;j<M;j++){var u=Math.random()*6.283,w=Math.acos(2*Math.random()-1),d=30+Math.random()*30;sv[j*3]=d*Math.sin(w)*Math.cos(u);sv[j*3+1]=d*Math.cos(w);sv[j*3+2]=d*Math.sin(w)*Math.sin(u)}
  var sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.BufferAttribute(sv,3));
@@ -313,7 +351,7 @@ try{
  var kg=new THREE.BufferGeometry();kg.setAttribute('position',new THREE.BufferAttribute(SP,3));kg.setAttribute('aS',new THREE.BufferAttribute(SS,1));
  spkU={uQ:{value:-1},uSize:{value:.22},uScale:{value:1},uO:{value:0},uMap:{value:tex}};
  spk=new THREE.Points(kg,new THREE.ShaderMaterial({uniforms:spkU,vertexShader:VS,fragmentShader:FS,transparent:true,blending:THREE.AdditiveBlending,depthWrite:false}));spk.frustumCulled=false;spk.visible=false;s.add(spk);
- var FC=[0xFFFFFF,0xFFD98A,0xFF9A3C,0x7a6cff];
+ var FC=[0xFFFFFF,0xFFD98A,0xFF9A3C,0xff4d5a];
  for(var f=0;f<FN;f++){var fm=new THREE.Sprite(new THREE.SpriteMaterial({map:tex,color:FC[f%4],blending:THREE.AdditiveBlending,transparent:true,depthWrite:false,opacity:0})),fu=Math.random()*6.283,fw=Math.acos(2*Math.random()-1);fm.userData={v:new THREE.Vector3(Math.sin(fw)*Math.cos(fu),Math.cos(fw)*.6,Math.sin(fw)*Math.sin(fu)).multiplyScalar(3+Math.random()*8),z:1.5+Math.random()*2.5};s.add(fm);fb.push(fm)}
  for(var n=0;n<2;n++){var rg=new THREE.Mesh(new THREE.RingGeometry(.94,1,96),new THREE.MeshBasicMaterial({color:n?0xFFD98A:0xffffff,transparent:true,opacity:0,blending:THREE.AdditiveBlending,side:THREE.DoubleSide,depthWrite:false}));rg.scale.setScalar(.01);s.add(rg);rings.push(rg)}
 }catch(e){r=null;cv.style.display='none';show()}
@@ -324,7 +362,7 @@ addEventListener('pointermove',function(e){if(done||go)return;mx=e.clientX/inner
 function loop(t){if(done)return;requestAnimationFrame(loop);if(!r)return;
  var T=t/1000,dt=Math.min(.05,T-last);last=T;if(t0===null)t0=T;var A=still?99:T-t0,c=tc<0?0:T-tc,d=io(cl(c/1.3)),q2=A-BANG;
  if(!banged&&A>=BANG){banged=true;if(!still)ov.classList.add('bang');gal.visible=true;spk.visible=true}
- if(A>BANG+3)show();
+ if(A>.25)show();
  galU.uQ.value=q2;spkU.uQ.value=q2;galU.uTime.value=T;
  core.scale.setScalar(A<BANG?.25+A/BANG*.9+Math.sin(A*14)*.06:2.6+22*Math.exp(-q2*3.5));core.material.opacity=A<BANG?1:.85;
  if(q2>=0){
@@ -342,9 +380,35 @@ function loop(t){if(done)return;requestAnimationFrame(loop);if(!r)return;
  r.render(s,cam)}
 requestAnimationFrame(loop);
 function end(){done=true;ov.remove();document.body.classList.remove('lock');scrollTo(0,0);window.__intro=false;window.__t0=performance.now()/1000;if(r){r.dispose();try{r.forceContextLoss()}catch(e){}}}
-btn.onclick=function(){if(go)return;go=true;tt.style.transform='';ov.classList.add('go');
- if(!r||still){setTimeout(function(){ov.classList.add('out')},still?100:300);setTimeout(end,still?500:900);return}
- tc=performance.now()/1000;setTimeout(function(){ov.classList.add('out')},1450);setTimeout(end,2100)};
+function quick(){if(go)return;go=true;tt.style.transform='';ov.classList.add('go');setTimeout(function(){ov.classList.add('out')},60);setTimeout(end,520)}
+btn.onclick=quick;ov.addEventListener('pointerdown',quick);
+if(inapp){end()}else{setTimeout(quick,1300)}
+})();
+</script>
+<script>
+/* APPROVED REVIEWS: add real, approved reviews here. Example:
+   {name:'Alex',rating:5,text:'Short comment from a real customer.',date:'2026-10-20'} */
+window.VAULTHQ_REVIEWS=window.VAULTHQ_REVIEWS||[];
+(function(){
+function stars(n){return '★★★★★'.slice(0,n)+'☆☆☆☆☆'.slice(0,5-n)}
+window.vhqRenderReviews=function(){
+ var L=document.getElementById('rlist'),S=document.getElementById('rsum'),R=window.VAULTHQ_REVIEWS||[];
+ L.textContent='';S.textContent='';
+ if(!R.length){var p=document.createElement('p');p.className='rempty';p.textContent='No reviews yet. Be the first to share what you think.';L.appendChild(p);return}
+ var sum=0;R.forEach(function(r){sum+=Number(r.rating)||0});
+ S.textContent=(sum/R.length).toFixed(1)+' out of 5 · '+R.length+(R.length===1?' review':' reviews');
+ R.forEach(function(r){
+  var c=document.createElement('div');c.className='rcard';
+  var top=document.createElement('div');top.className='rtop';
+  var st=document.createElement('span');st.className='stars';st.setAttribute('aria-label',r.rating+' out of 5 stars');st.textContent=stars(Math.max(0,Math.min(5,Number(r.rating)||0)));
+  var nm=document.createElement('strong');nm.textContent=r.name||'Customer';
+  var dt=document.createElement('small');dt.textContent=r.date||'';
+  var left=document.createElement('span');left.appendChild(st);left.appendChild(document.createTextNode(' '));left.appendChild(nm);
+  top.appendChild(left);top.appendChild(dt);
+  var tx=document.createElement('p');tx.textContent=r.text||'';
+  c.appendChild(top);c.appendChild(tx);L.appendChild(c)});
+};
+window.vhqRenderReviews();
 })();
 </script>
 </body></html>
