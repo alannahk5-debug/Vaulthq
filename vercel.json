@@ -1,0 +1,16 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "vaulthqq.vercel.app" }],
+      "destination": "/workspace-7k2q.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/workspace-7k2q",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    }
+  ]
+}
